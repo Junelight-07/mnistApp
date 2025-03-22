@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnaissance de chiffres manuscrits</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Importer ONNX Runtime Web -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/onnxruntime-web/1.14.0/ort.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Reconnaissance de chiffres manuscrits</h1>
+    <p>Dessinez un chiffre entre 0 et 9 dans la zone ci-dessous</p>
+
+    <div class="canvas-container">
+        <canvas id="drawing-canvas" width="280" height="280"></canvas>
+    </div>
+
+    <div class="controls">
+        <button id="clear-button">Effacer</button>
+        <button id="predict-button">Prédire</button>
+        <label class="toggle-container">
+            <input type="checkbox" id="invert-colors">
+            <span class="toggle-text">Inverser couleurs</span>
+        </label>
+    </div>
+
+    <div id="loading" class="loading">Prédiction en cours...</div>
+    <div id="prediction" class="prediction"></div>
+
+    <div id="debug-container" class="debug-container">
+        <h3>Image prétraitée (28x28)</h3>
+        <canvas id="processed-canvas" width="140" height="140"></canvas>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
