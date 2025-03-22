@@ -1,0 +1,1 @@
+Projet de reconnaissance de chiffre manuscrit par Alexy DE BARROS et Yani BOUGARA
